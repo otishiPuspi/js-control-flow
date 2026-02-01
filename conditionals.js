@@ -32,6 +32,16 @@ for(let item in subjectMark){
 
 
 // 2. Create a traffic light system (red, yellow, green)
+let lights = ["red","yellow","green"];
+let time = [5000,4000,5000];
+let index = 0;
+function roadCrossing(){
+  console.clear();
+  console.log(lights[index]);
+  setTimeout(roadCrossing,time[index]);
+  index = (index + 1) % lights.length;
+}
+roadCrossing();
 
 
 // 3. Create a leap year checker
